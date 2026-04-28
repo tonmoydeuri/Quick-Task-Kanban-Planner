@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick-Task Kanban</title>
+    <link rel="stylesheet" href="kanban.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Quick-Task Planner</h1>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Enter a new task...">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+    </div>
+
+    <div class="board">
+        <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>To Do</h3>
+            <div class="task-list"></div>
+        </div>
+        <div class="column" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>In Progress</h3>
+            <div class="task-list"></div>
+        </div>
+        <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Done</h3>
+            <div class="task-list"></div>
+        </div>
+    </div>
+
+    <script src="kanban.js"></script>
+</body>
+</html>
